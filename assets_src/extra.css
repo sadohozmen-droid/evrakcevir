@@ -1,0 +1,43 @@
+/* çok sayfalı site eklemeleri */
+.tool{display:block}
+.tool h1{font-size:clamp(28px,3.6vw,38px);font-weight:800;letter-spacing:-.015em}
+.crumbs{font-size:13.5px;color:var(--muted);margin:0 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.content{display:grid;gap:34px;max-width:76ch;margin-top:44px}
+.content h2{font-size:24px;font-weight:700;margin-bottom:12px}
+.content p{margin:0 0 10px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start}
+.steps li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font:600 14px var(--font-mono)}
+.qa{display:grid;gap:8px}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.qa summary{cursor:pointer;font-weight:600}
+.qa details p{margin:8px 0 0;color:var(--muted)}
+.related{margin-top:44px}
+.related .grid{padding-bottom:0}
+.home-copy{max-width:76ch;display:grid;gap:10px;padding-bottom:48px}
+.home-copy h2{font-size:24px;font-weight:700}
+.home-copy p{margin:0;color:var(--muted)}
+.home-group{display:grid;gap:12px;margin-bottom:26px}
+.home-group h2{font-size:20px;font-weight:700}
+.home-group .grid{padding-bottom:0}
+.legal{max-width:72ch;padding:32px 0 56px;display:grid;gap:12px}
+.legal h1{font-size:34px;font-weight:800}
+.legal h2{font-size:20px;font-weight:700;margin-top:10px}
+.legal p{margin:0}
+footer nav{display:flex;gap:6px 16px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.meta-card{border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:grid;gap:4px;font-size:14px;background:var(--bg)}
+.meta-card div{display:grid;grid-template-columns:90px 1fr;gap:8px}
+.meta-card span{color:var(--muted)}
+.form{display:grid;gap:12px}
+.form .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.form .row2{grid-template-columns:1fr}}
+.form label{display:grid;gap:5px;font-size:14px;font-weight:600}
+.form input,.form textarea,.form select{font:15px/1.5 var(--font-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:9px 11px;width:100%}
+.form textarea{resize:vertical}
+.form input:focus,.form textarea:focus,.form select:focus,.num:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.form small{font-weight:400;color:var(--muted);font-size:12.5px}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap}
