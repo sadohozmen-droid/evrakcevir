@@ -598,3 +598,8 @@ if GUIDES:
     sm = open(os.path.join(OUT, "sitemap.xml")).read().replace("</urlset>\n", "".join(f"  <url><loc>{SITE}/rehber/{g['slug']}/</loc><lastmod>{g.get('updated', g.get('date', TODAY))}</lastmod></url>\n" for g in GUIDES) + f"  <url><loc>{SITE}/rehber/</loc><lastmod>{TODAY}</lastmod></url>\n</urlset>\n")
     open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)
 print("rehber:", len(GUIDES))
+
+# ---------- static/ klasörü (doğrulama dosyaları vb.) olduğu gibi kopyalanır ----------
+if os.path.isdir("static"):
+    for _n in os.listdir("static"):
+        shutil.copy(os.path.join("static", _n), os.path.join(OUT, _n))
