@@ -216,7 +216,9 @@ TOOLS += [
               "Üst yazıyı ve ekleri tek tek ya da hepsini ZIP olarak indirin."],
        about=["Kamu kurumları resmî yazışmalarını e-Yazışma Teknik Rehberi'ne uygun e-Yazışma Paketi (.eyp) olarak gönderir. KEP (Kayıtlı Elektronik Posta) ile şirketlere ve vatandaşlara gelen resmî yazılar da çoğunlukla bu biçimdedir.",
               ".eyp dosyası, üst yazıyı, ekleri, belgeye ait üst verileri ve elektronik imzayı tek pakette toplar. Bu araç paketi açar, üst yazıyı ve ekleri ayırır. Paket içinde e-imzalı (.imz) bir ek varsa İMZ açma aracıyla onu da açabilirsiniz."],
-       faq=[("EYP dosyası nasıl açılır?", "Dosyayı bu sayfaya bırakın. Üst yazı ve ekler ayrı dosyalar olarak listelenir, istediğinizi indirebilirsiniz."),
+       faq=[("EYP dosyası nedir?", "EYP, kamu kurumlarının resmî yazıyı, eklerini, üst verisini ve imza bilgisini tek dosyada topladığı e-Yazışma Paketidir. Ayrıntılar EYP dosyası nedir rehberimizde."),
+            ("EYP dosyası nasıl açılır?", "Dosyayı bu sayfaya bırakın. Üst yazı ve ekler ayrı dosyalar olarak listelenir, istediğinizi indirebilirsiniz."),
+            ("EYP dosyası telefonda açılır mı?", "Evet. Bu sayfayı telefonun tarayıcısında açın ve dosyayı Dosyalar uygulamasından seçin. Çıkan PDF'leri telefonun PDF görüntüleyicisinde okuyabilirsiniz."),
             ("Şifreli EYP açılır mı?", "Hayır. Şifreli paketler yalnızca alıcı kurumun şifre çözme anahtarıyla açılabilir."),
             ("İmzanın geçerliliği kontrol ediliyor mu?", "Hayır. Bu araç paketin içeriğini açar. İmza geçerliliği için e-İmzager gibi bir imza programı kullanın.")]),
   dict(id="efatura-excel", slug="e-fatura-xml-excel-aktarma", tag="Muhasebe", card="e-Fatura → Excel", fmt=(".xml", ".xlsx"), libs=["jszip"],
@@ -376,6 +378,27 @@ def write(path, content):
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, "w", encoding="utf-8").write(content)
 
+# ---------- rehberler (rehber/*.md) ----------
+import glob as _glob
+try:
+    import markdown as _md
+except ImportError:
+    _md = None
+GUIDES = []
+for _f in sorted(_glob.glob("rehber/*.md")):
+    _raw = open(_f, encoding="utf-8").read()
+    _m = re.match(r"^---\n(.*?)\n---\n(.*)$", _raw, re.S)
+    if not _m: continue
+    _meta = {}
+    for _line in _m.group(1).splitlines():
+        if ":" in _line:
+            k, v = _line.split(":", 1); _meta[k.strip()] = v.strip()
+    _meta["body_md"] = _m.group(2).strip()
+    _meta.setdefault("slug", os.path.basename(_f)[:-3])
+    _meta["tools"] = [x.strip() for x in _meta.get("tools", "").split(",") if x.strip() in TOOL_BY_ID]
+    GUIDES.append(_meta)
+GUIDES.sort(key=lambda g: g.get("date", ""), reverse=True)
+
 # ---------- araç sayfaları ----------
 for t in TOOLS:
     path = f"/{t['slug']}/"
@@ -399,6 +422,10 @@ for t in TOOLS:
     others = (same + [o for o in TOOLS if o["id"] != t["id"] and o not in same])[:4]
     target = "#dl-makam" if t["id"] in ("dilekce", "istifa", "bilgi") else f"#f-{t['id']}" if t["id"] != "kimlik" else "#f-on"
     next_btn = "Dilekçeyi doldurun" if t["id"] in ("dilekce", "istifa", "bilgi") else "Fotoğrafları seçin" if t["id"] == "kimlik" else "Dosyanızı seçin"
+    my_guides = [g for g in GUIDES if t["id"] in g["tools"]]
+    guides_sec = (f'<section class="related"><p class="section-title">İlgili rehberler</p><nav class="grid">'
+                  + "".join(f'<a class="card" href="/rehber/{g["slug"]}/"><h3>{e(g.get("h1", g.get("title", "")))}</h3><p>{e(g.get("description", ""))}</p></a>' for g in my_guides)
+                  + '</nav></section>') if my_guides else ""
     body = f"""<main class="wrap">
 <section class="tool on" data-tool="{t['id']}">{sec}</section>
 <div class="content">
@@ -408,7 +435,7 @@ for t in TOOLS:
   <section><h2>Sık sorulan sorular</h2><div class="qa">{faq}</div></section>
   <section class="next"><h2>3 adımda kullanın</h2><ol class="steps">{steps}</ol><p class="note" style="margin:0">Ücretsizdir; üyelik ya da kişisel bilgi istenmez.</p><a class="btn" href="{target}" onclick="var el=document.querySelector('{target}');if(el){{el.scrollIntoView({{behavior:'smooth',block:'center'}});setTimeout(function(){{el.focus()}},300)}};return false;">{next_btn}</a></section>
 </div>
-<section class="related"><p class="section-title">Benzer araçlar</p><nav class="grid">{"".join(card(o) for o in others)}</nav></section>
+{guides_sec}<section class="related"><p class="section-title">Benzer araçlar</p><nav class="grid">{"".join(card(o) for o in others)}</nav></section>
 <div style="height:48px"></div>
 </main>
 """
@@ -535,26 +562,6 @@ for f in ("_headers",):
     if os.path.exists(os.path.join(OUT, f)): os.remove(os.path.join(OUT, f))
 print("ok", len(urls), "sayfa")
 
-# ---------- rehberler (rehber/*.md) ----------
-import glob as _glob
-try:
-    import markdown as _md
-except ImportError:
-    _md = None
-GUIDES = []
-for _f in sorted(_glob.glob("rehber/*.md")):
-    _raw = open(_f, encoding="utf-8").read()
-    _m = re.match(r"^---\n(.*?)\n---\n(.*)$", _raw, re.S)
-    if not _m: continue
-    _meta = {}
-    for _line in _m.group(1).splitlines():
-        if ":" in _line:
-            k, v = _line.split(":", 1); _meta[k.strip()] = v.strip()
-    _meta["body_md"] = _m.group(2).strip()
-    _meta.setdefault("slug", os.path.basename(_f)[:-3])
-    _meta["tools"] = [x.strip() for x in _meta.get("tools", "").split(",") if x.strip() in TOOL_BY_ID]
-    GUIDES.append(_meta)
-GUIDES.sort(key=lambda g: g.get("date", ""), reverse=True)
 
 def _faq_from_md(md_text):
     sec = re.split(r"^## Sık sorulan sorular\s*$", md_text, flags=re.M)

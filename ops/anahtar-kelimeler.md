@@ -20,7 +20,7 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | dilekçe nasıl yazılır, dilekçe örneği | /dilekce-yazma/ | yayında |
 | istifa dilekçesi örneği | /istifa-dilekcesi/ | yayında |
 | bilgi edinme dilekçesi | /bilgi-edinme-dilekcesi/ | yayında |
-| eyp dosyası nedir, kep ile gelen dosya açılmıyor | rehber | planlı |
+| eyp dosyası nedir, kep ile gelen dosya açılmıyor | /rehber/eyp-dosyasi-nedir/ | yayında |
 | .imz dosyası nedir, e-imzalı belge nasıl açılır | rehber | planlı |
 | e-fatura xml dosyası nasıl açılır | rehber | planlı |
 | e-arşiv fatura pdf indirme | rehber | planlı |

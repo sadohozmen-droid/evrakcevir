@@ -53,8 +53,8 @@ TOOL_TEXT = {
    gets=["İmzanın içindeki asıl belge (PDF, Word, UDF, XML)", "İmzalayanların adı ve imza zamanı"],
    faq_override={}),
  "eyp": dict(
-   title="EYP Dosyası Açma – e-Yazışma Paketini Programsız Açın",
-   desc="KEP ile gelen .eyp e-Yazışma paketini programsız açın. Üst yazıyı ve ekleri indirin; konu, sayı, tarih ve gönderen bilgisini görün. Ücretsiz, dosya yüklenmez.",
+   title="EYP Dosyası Açma – KEP ile Gelen Paketi Programsız Açın",
+   desc="KEP ile gelen .eyp dosyasını program kurmadan, telefonda bile açın. Üst yazıyı ve ekleri ayrı ayrı indirin; konu, sayı ve gönderen görünür. Ücretsizdir.",
    who="Kamu kurumlarından KEP ile resmî yazı alan şirketler, dernekler, avukatlar ve vatandaşlar.",
    how=".eyp dosyası, e-Yazışma Teknik Rehberi'ne göre hazırlanmış bir pakettir: içinde üst yazı, ekler, belgenin üst verisi ve imza dosyaları bulunur. Araç paketi açar, üst yazıyı ve ekleri ayırır, üst veriden konu, sayı, tarih ve gönderen bilgisini okur.",
    gets=["Üst yazı ve her ek, ayrı dosyalar olarak", "Belgenin konu, sayı, tarih ve gönderen özeti"],
