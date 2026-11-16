@@ -27,3 +27,4 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | uyap'a dilekçe nasıl gönderilir (genel) | rehber | planlı |
 | pdf'i e-devlet / başvuru için küçültme | rehber | planlı |
 | kimlik fotokopisi nasıl çekilir / yazdırılır | rehber | planlı |
+| udf dosyası telefonda açma (android, iphone) | rehber | planlı |

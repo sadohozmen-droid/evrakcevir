@@ -593,7 +593,7 @@ for g in GUIDES:
 
 if GUIDES:
     items = "".join(f'<a class="card" href="/rehber/{g["slug"]}/"><h3>{e(g.get("h1", g.get("title", "")))}</h3><p>{e(g.get("description", ""))}</p></a>' for g in GUIDES)
-    write("/rehber/", head(f"Rehberler – UDF, EYP, e-İmza ve e-Fatura | {BRAND}", f"UYAP UDF, KEP EYP, e-imzalı İMZ ve e-Fatura XML dosyalarıyla ilgili adım adım rehberler. Dosya nasıl açılır, nasıl çevrilir, nelere dikkat edilir; hepsi tek yerde.", "/rehber/", [])
+    write("/rehber/", head(f"Rehberler – UDF, EYP, e-İmza ve e-Fatura | {BRAND}", f"UYAP UDF, KEP EYP, e-imzalı İMZ ve e-Fatura XML dosyalarıyla ilgili adım adım rehberler. Dosya nasıl açılır, nasıl çevrilir, nelere dikkat edilir; hepsi burada.", "/rehber/", [])
           + f'<main class="wrap"><section class="legal" style="max-width:none"><h1>Rehberler</h1><p class="note">Resmî dosya biçimleriyle ilgili adım adım anlatımlar.</p><nav class="grid">{items}</nav></section></main>' + foot(False))
     sm = open(os.path.join(OUT, "sitemap.xml")).read().replace("</urlset>\n", "".join(f"  <url><loc>{SITE}/rehber/{g['slug']}/</loc><lastmod>{g.get('updated', g.get('date', TODAY))}</lastmod></url>\n" for g in GUIDES) + f"  <url><loc>{SITE}/rehber/</loc><lastmod>{TODAY}</lastmod></url>\n</urlset>\n")
     open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)
