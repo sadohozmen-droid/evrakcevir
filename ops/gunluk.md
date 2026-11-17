@@ -4,3 +4,4 @@
 - 2026-11-16: /rehber/ açıklaması 163→160 karaktere indirildi (kural uyumu). Anahtar kelime tablosuna 'udf telefonda açma' planlı eklendi.
 - 2026-11-16: Yeni rehber: EYP dosyası nedir, nasıl açılır (/rehber/eyp-dosyasi-nedir/). İyileştirme: araç sayfalarına "İlgili rehberler" bölümü; EYP araç sayfasının başlık/açıklaması yenilendi, SSS'ye "EYP nedir" ve "telefonda açılır mı" eklendi.
 - 2026-11-17: Günlük rapor (Search Console ilk veri: 1 gösterim, 0 tıklama; sitemap 20 URL, 0 dizinde). Site değişikliği yok.
+- 2026-11-17: Teknik denetim. Düzeltme: 360-390 px ekranda üst menü (3 bağlantı) taşıyor, tüm sayfalarda yatay kaydırma/uzaklaştırma yapıyordu → dar ekranda menü ikinci satıra iniyor. Sitemap lastmod artık derleme günü değil, site kaynağının son değiştiği gün (iş akışında fetch-depth: 0). measure.py mobil taşmayı da yakalıyor.

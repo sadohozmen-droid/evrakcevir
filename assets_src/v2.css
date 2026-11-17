@@ -113,4 +113,9 @@ a.btn{text-decoration:none}
 .guide table{border-collapse:collapse;width:100%;font-size:15px}
 .guide th,.guide td{border:1px solid var(--line);padding:8px 10px;text-align:left}
 .guide a{color:var(--accent)}
-@media (max-width:520px){.topnav a{padding:0 7px;font-size:14px}}
+@media (max-width:520px){
+  /* 3 menü bağlantısı + marka 360-390 px ekrana sığmıyordu (yatay kaydırma): menü ikinci satıra iner */
+  header.top .wrap{flex-wrap:wrap;column-gap:8px;row-gap:0;padding-bottom:4px}
+  .topnav{width:100%;margin-left:-8px}
+  .topnav a{padding:0 8px;font-size:14.5px}
+}

@@ -9,7 +9,7 @@ srv=subprocess.Popen(["python3","-m","http.server","8766","-d",ROOT],stdout=subp
 BASE="http://localhost:8766"
 JS="""() => {
  const vw=innerWidth, vh=innerHeight;
- const over=document.documentElement.scrollWidth>vw+1;
+ const over=document.documentElement.scrollWidth>vw+1 || vw>screen.width+1; // mobilde taşma sayfayı uzaklaştırır, innerWidth büyür
  const small=[...document.querySelectorAll('a,button,label.chip,select,input:not([type=file]):not([type=radio]):not([type=checkbox]),textarea,summary,label.check')].filter(e=>{const r=e.getBoundingClientRect(); const cs=getComputedStyle(e); return r.width>0&&r.height>0&&cs.visibility!=='hidden'&&r.height<44}).map(e=>(e.tagName+'.'+(e.className||'')+':'+(e.textContent||'').trim().slice(0,18)+'@'+Math.round(e.getBoundingClientRect().height)));
  const hdr=document.querySelector('header'); const hh=hdr?hdr.getBoundingClientRect().height:0;
  const h1=document.querySelector('h1'); const h1b=h1?h1.getBoundingClientRect().bottom:0;

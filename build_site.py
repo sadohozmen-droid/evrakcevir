@@ -7,6 +7,17 @@ SITE = os.environ.get("SITE", "https://evrakcevir.com")
 BRAND = "Evrakçevir"
 OUT = "site"
 TODAY = datetime.date.today().isoformat()
+
+def _src_date():
+    """Site kaynağının son değiştiği gün (sitemap lastmod). ops/ commitleri lastmod'u değiştirmesin."""
+    import subprocess
+    try:
+        d = subprocess.run(["git", "log", "-1", "--format=%cs", "--", "build_site.py", "content.py", "sections.json", "assets_src"],
+                           capture_output=True, text=True, timeout=10).stdout.strip()
+        return d or TODAY
+    except Exception:
+        return TODAY
+SRC_DATE = _src_date()
 SECS = json.load(open("sections.json", encoding="utf-8"))
 
 def simple_sec(id, h, lead, accept, drop_title, drop_sub, btn, note="", multiple=True, extra_left="", extra_right=""):
@@ -553,7 +564,7 @@ nf = nf.replace('<link rel="canonical" href="' + SITE + '/404.html">', '<meta na
 open(os.path.join(OUT, "404.html"), "w", encoding="utf-8").write(nf)
 urls = ["/"] + [f"/{t['slug']}/" for t in TOOLS] + ["/hakkimizda/", "/gizlilik/"]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
-    f"  <url><loc>{SITE}{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n"
+    f"  <url><loc>{SITE}{u}</loc><lastmod>{SRC_DATE}</lastmod></url>\n" for u in urls) + "</urlset>\n"
 open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)
 open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 open(os.path.join(OUT, "CNAME"), "w").write(SITE.replace("https://", "") + "\n")
@@ -602,7 +613,7 @@ if GUIDES:
     items = "".join(f'<a class="card" href="/rehber/{g["slug"]}/"><h3>{e(g.get("h1", g.get("title", "")))}</h3><p>{e(g.get("description", ""))}</p></a>' for g in GUIDES)
     write("/rehber/", head(f"Rehberler – UDF, EYP, e-İmza ve e-Fatura | {BRAND}", f"UYAP UDF, KEP EYP, e-imzalı İMZ ve e-Fatura XML dosyalarıyla ilgili adım adım rehberler. Dosya nasıl açılır, nasıl çevrilir, nelere dikkat edilir; hepsi burada.", "/rehber/", [])
           + f'<main class="wrap"><section class="legal" style="max-width:none"><h1>Rehberler</h1><p class="note">Resmî dosya biçimleriyle ilgili adım adım anlatımlar.</p><nav class="grid">{items}</nav></section></main>' + foot(False))
-    sm = open(os.path.join(OUT, "sitemap.xml")).read().replace("</urlset>\n", "".join(f"  <url><loc>{SITE}/rehber/{g['slug']}/</loc><lastmod>{g.get('updated', g.get('date', TODAY))}</lastmod></url>\n" for g in GUIDES) + f"  <url><loc>{SITE}/rehber/</loc><lastmod>{TODAY}</lastmod></url>\n</urlset>\n")
+    sm = open(os.path.join(OUT, "sitemap.xml")).read().replace("</urlset>\n", "".join(f"  <url><loc>{SITE}/rehber/{g['slug']}/</loc><lastmod>{g.get('updated', g.get('date', TODAY))}</lastmod></url>\n" for g in GUIDES) + f"  <url><loc>{SITE}/rehber/</loc><lastmod>{max([SRC_DATE] + [str(g.get('updated', g.get('date', SRC_DATE))) for g in GUIDES])}</lastmod></url>\n</urlset>\n")
     open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)
 print("rehber:", len(GUIDES))
 
