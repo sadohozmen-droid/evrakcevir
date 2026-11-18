@@ -42,7 +42,7 @@ def simple_sec(id, h, lead, accept, drop_title, drop_sub, btn, note="", multiple
     </div>
   """
 
-SECS["imz"] = simple_sec("imz", "İMZ dosyası açma", "e-imzalı .imz dosyasının içindeki asıl belgeyi (PDF, Word, UDF, XML) çıkarır, kimin ve ne zaman imzaladığını gösterir. Program kurmanız gerekmez.", ".imz,.p7s,.p7m", "İMZ dosyalarını buraya bırakın", ".imz, .p7s veya .p7m", "Belgeyi çıkar", "Araç imzanın hukuki geçerliliğini doğrulamaz, yalnızca içindeki belgeyi açar. Geçerlilik kontrolü için e-İmzager gibi bir imza programı kullanın.")
+SECS["imz"] = simple_sec("imz", "İMZ dosyası açma", "e-imzalı .imz dosyasının içindeki asıl belgeyi (PDF, Word, UDF, XML) çıkarır, kimin ve ne zaman imzaladığını gösterir. Program kurmanız gerekmez.", ".imz,.p7s,.p7m", "İMZ dosyalarını buraya bırakın", ".imz, .p7s veya .p7m", "Belgeyi çıkar", "Araç imzanın hukuki geçerliliğini doğrulamaz, yalnızca içindeki belgeyi açar. Geçerlilik kontrolü için İmzager gibi bir e-imza programı kullanın.")
 SECS["eyp"] = simple_sec("eyp", "EYP dosyası açma", "KEP ile ya da kurumlardan gelen .eyp e-Yazışma paketini açın. Üst yazı ve ekleri ayrı ayrı indirin. Konu, sayı, tarih ve gönderen bilgisini görün.", ".eyp", "EYP dosyalarını buraya bırakın", "e-Yazışma paketi (.eyp)", "Paketi aç", "Şifreli paketler yalnızca alıcı kurumun anahtarıyla açılabilir. İmza geçerliliği bu araçta doğrulanmaz.", extra_right='\n        <div id="m-eyp" style="display:grid;gap:8px"></div>')
 SECS["efatura-excel"] = simple_sec("efatura-excel", "e-Fatura XML'den Excel'e aktarma", "Yüzlerce e-Fatura ve e-Arşiv XML'ini tek Excel dosyasında listeleyin: fatura no, tarih, satıcı, alıcı, VKN/TCKN, matrah, KDV ve toplamlar. İkinci sayfada tüm fatura kalemleri yer alır.", ".xml,.zip,text/xml,application/xml,application/zip", "Fatura XML veya ZIP dosyalarını bırakın", "Bir ay boyunca gelen tüm faturaları birlikte seçebilirsiniz", "Excel'e aktar", "Tutarlar sayı olarak yazılır, Excel'de doğrudan toplanıp filtrelenebilir.")
 PG_RIGHT = """
@@ -214,8 +214,11 @@ TOOLS += [
               "Çıkan PDF, Word, UDF ya da XML dosyasını indirin. İmzalayanın adı ve imza zamanı sonucun altında görünür."],
        about=["e-imza ile imzalanan belgeler çoğu zaman .imz uzantısıyla gelir. Bu dosya, asıl belgeyi ve elektronik imzayı birlikte taşıyan bir zarftır (CAdES). Windows bu uzantıyı tanımadığı için dosya çift tıklayınca açılmaz.",
               "Bu araç zarfı açar ve içindeki belgeyi aslı gibi verir. Birden fazla kişinin sırayla imzaladığı (seri imzalı) dosyalarda tüm imza katmanlarını çözer ve her imzalayanı listeler."],
-       faq=[(".imz dosyası nasıl açılır?", "Dosyayı bu sayfaya bırakmanız yeterli. İçindeki belge çıkarılır ve normal bir PDF ya da Word dosyası olarak indirilir. e-İmzager veya benzeri bir program kurmanız gerekmez."),
-            ("İmzanın geçerli olup olmadığını gösteriyor mu?", "Hayır. Araç imzalayanın adını ve imza zamanını gösterir ama sertifika geçerliliğini ve imzanın bütünlüğünü doğrulamaz. Hukuki doğrulama için e-İmzager gibi bir imza programı kullanın."),
+       faq=[(".imz dosyası nasıl açılır?", "Dosyayı bu sayfaya bırakmanız yeterli. İçindeki belge çıkarılır ve normal bir PDF ya da Word dosyası olarak indirilir. İmzager veya benzeri bir e-imza programı kurmanız gerekmez."),
+            ("İmzanın geçerli olup olmadığını gösteriyor mu?", "Hayır. Araç imzalayanın adını ve imza zamanını gösterir ama sertifika geçerliliğini ve imzanın bütünlüğünü doğrulamaz. Hukuki doğrulama için İmzager gibi bir e-imza programı kullanın."),
+            ("İMZ dosyası nedir?", ".imz, e-imzalı belgenin imzayla birlikte saklandığı dosyadır: asıl belge (PDF, Word, UDF, XML), imzalayanın sertifikası ve imza bilgisi aynı zarfın içindedir. Ayrıntılar .imz dosyası nedir rehberimizde."),
+            ("Açmak için e-imza kartı gerekir mi?", "Hayır. Kart ve kart okuyucu yalnızca imzalamak için gerekir. Belgeyi okumak için dosyayı bu sayfaya bırakmanız yeterli; telefonda da çalışır."),
+            (".p7s ve .p7m dosyaları da açılıyor mu?", "Evet. Bunlar .imz ile aynı türden (CAdES) imza dosyalarıdır. Yalnız belgeyi içermeyen ayrık imza dosyalarında asıl belge size ayrı bir dosya olarak gelmiş olmalıdır."),
             ("İçinden UDF çıktı, ne yapmalıyım?", "UDF → PDF aracıyla çıkan UDF dosyasını PDF'e çevirebilirsiniz."),
             ("Dosyam bir yere gönderiliyor mu?", "Hayır. İşlem tarayıcınızda yapılır.")]),
   dict(id="eyp", slug="eyp-dosyasi-acma", tag="KEP", card="EYP dosyası açma", fmt=(".eyp", ".pdf"), libs=["jszip"],
@@ -232,7 +235,7 @@ TOOLS += [
             ("EYP dosyası telefonda açılır mı?", "Evet. Bu sayfayı telefonun tarayıcısında açın ve dosyayı Dosyalar uygulamasından seçin. Çıkan PDF'leri telefonun PDF görüntüleyicisinde okuyabilirsiniz."),
             ("EYP dosyası Word'e çevrilir mi?", "Doğrudan değil. Paketi açınca üst yazı ve ekler kendi biçimleriyle çıkar. Ek .udf ise UDF'den Word'e çevirme aracıyla Word'e çevirebilirsiniz; PDF'ten Word'e çeviri bu sitede yok."),
             ("Şifreli EYP açılır mı?", "Hayır. Şifreli paketler yalnızca alıcı kurumun şifre çözme anahtarıyla açılabilir."),
-            ("İmzanın geçerliliği kontrol ediliyor mu?", "Hayır. Bu araç paketin içeriğini açar. İmza geçerliliği için e-İmzager gibi bir imza programı kullanın.")]),
+            ("İmzanın geçerliliği kontrol ediliyor mu?", "Hayır. Bu araç paketin içeriğini açar. İmza geçerliliği için İmzager gibi bir e-imza programı kullanın.")]),
   dict(id="efatura-excel", slug="e-fatura-xml-excel-aktarma", tag="Muhasebe", card="e-Fatura → Excel", fmt=(".xml", ".xlsx"), libs=["jszip"],
        title="e-Fatura XML Excel'e Aktarma – Toplu Fatura Listesi Çıkar",
        desc="e-Fatura ve e-Arşiv XML dosyalarını toplu olarak Excel'e aktarın. Fatura no, tarih, VKN, matrah, KDV ve kalemler tek tabloda. Ücretsiz, dosya yüklenmez.",

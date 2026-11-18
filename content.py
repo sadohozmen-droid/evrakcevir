@@ -47,7 +47,7 @@ TOOL_TEXT = {
    faq_override={}),
  "imz": dict(
    title="İMZ Dosyası Açma – e-İmzalı .imz Dosyasını PDF'e Çevirin",
-   desc="e-imzalı .imz dosyasını programsız açın. İçindeki PDF, Word veya UDF belgeyi çıkarır, imzalayanı ve imza tarihini gösterir. Ücretsiz, dosyanız yüklenmez.",
+   desc="e-imzalı .imz dosyasını program ve kart olmadan, telefonda bile açın. İçindeki PDF, Word ya da UDF belgeyi çıkarır, imzalayanı gösterir. Dosya yüklenmez.",
    who="KEP ya da e-postayla e-imzalı belge alan şirketler, vatandaşlar, avukatlar ve muhasebeciler.",
    how=".imz dosyası, asıl belgeyi ve elektronik imzayı birlikte taşıyan bir zarftır (CAdES). Araç zarfı açar, içindeki belgenin türünü kendisi bulur ve sertifikadaki imzalayan adını ve imza zamanını okur. Seri imzalı dosyalarda tüm katmanları sırayla açar.",
    gets=["İmzanın içindeki asıl belge (PDF, Word, UDF, XML)", "İmzalayanların adı ve imza zamanı"],
@@ -125,7 +125,7 @@ HOME_PROBLEMS = [
 HOME_FAQ = [
   ("UDF dosyası nasıl açılır?", "UDF dosyasını UDF → PDF aracına bırakırsanız birkaç saniyede PDF olarak açılır. UYAP Doküman Editörü kurmanız gerekmez. Metni düzenlemek isterseniz UDF → Word aracını kullanın."),
   ("EYP dosyası nasıl açılır?", "EYP açma aracına bırakın; üst yazı ve ekler ayrı dosyalar olarak çıkar. Şifreli paketler yalnızca alıcı kurumun anahtarıyla açılabilir."),
-  (".imz uzantılı dosya nasıl açılır?", "İMZ açma aracı, e-imzalı dosyanın içindeki PDF, Word ya da UDF belgeyi çıkarır ve imzalayanın adını gösterir. İmzanın hukuki geçerliliğini doğrulamaz; bunun için e-İmzager gibi bir imza programı gerekir."),
+  (".imz uzantılı dosya nasıl açılır?", "İMZ açma aracı, e-imzalı dosyanın içindeki PDF, Word ya da UDF belgeyi çıkarır ve imzalayanın adını gösterir. İmzanın hukuki geçerliliğini doğrulamaz; bunun için İmzager gibi bir e-imza programı gerekir."),
   ("Dosyalarım bir sunucuya yükleniyor mu?", "Hayır. Tüm dönüşümler tarayıcınızın içinde yapılır ve dosyanız internete gönderilmez. Sayfa açıldıktan birkaç saniye sonra internet bağlantınızı kesip deneyerek bunu kendiniz doğrulayabilirsiniz."),
   ("Ücretli mi, üyelik gerekiyor mu?", "Hayır. Tüm araçlar ücretsizdir; üyelik, e-posta adresi ya da kişisel bilgi istenmez."),
 ]

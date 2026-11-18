@@ -3,7 +3,7 @@ title: EYP Dosyası Nedir? KEP ile Gelen Paket Nasıl Açılır
 h1: EYP dosyası nedir, nasıl açılır?
 description: EYP, kamu kurumlarının resmî yazıyı ve eklerini tek dosyada gönderdiği e-Yazışma Paketidir. KEP ile gelen .eyp dosyasını programsız açmanın yolu burada.
 date: 2026-11-16
-updated: 2026-11-16
+updated: 2026-11-18
 tools: eyp, imz, udf-pdf
 ---
 EYP dosyası, bir kamu kurumunun resmî yazıyı, eklerini ve belgenin bilgilerini tek pakette gönderdiği **e-Yazışma Paketi**dir. Bilgisayarınız bu uzantıyı tanımadığı için çift tıklayınca açılmaz. Paketi programsız açmanın en kolay yolu, dosyayı [EYP açma aracına](/eyp-dosyasi-acma/) bırakıp üst yazıyı ve ekleri ayrı ayrı indirmektir.
@@ -38,7 +38,7 @@ Paket tarayıcınızın içinde açılır, dosya hiçbir sunucuya yüklenmez. Te
 
 Eklerden bazıları kendi içinde e-imzalı (.imz) ya da UYAP biçiminde (.udf) olabilir. Bu dosyalar da normal programlarla açılmaz:
 
-- **.imz ekleri:** [İMZ dosyası açma aracı](/imz-dosyasi-acma/) imza zarfını açar ve içindeki PDF ya da Word belgesini verir.
+- **.imz ekleri:** [İMZ dosyası açma aracı](/imz-dosyasi-acma/) imza zarfını açar ve içindeki PDF ya da Word belgesini verir. Bu dosyanın ne olduğunu [.imz dosyası nedir?](/rehber/imz-dosyasi-nedir/) rehberinde anlattık.
 - **.udf ekleri:** [UDF → PDF aracı](/udf-pdf-cevirme/) dosyayı okunabilir PDF'e çevirir. UDF'nin ne olduğunu [UDF dosyası nasıl açılır?](/rehber/udf-dosyasi-nasil-acilir/) rehberinde anlattık.
 
 ## EYP dosyası neden açılmıyor?
