@@ -5,3 +5,4 @@
 - 2026-11-16: Yeni rehber: EYP dosyası nedir, nasıl açılır (/rehber/eyp-dosyasi-nedir/). İyileştirme: araç sayfalarına "İlgili rehberler" bölümü; EYP araç sayfasının başlık/açıklaması yenilendi, SSS'ye "EYP nedir" ve "telefonda açılır mı" eklendi.
 - 2026-11-17: Günlük rapor (Search Console ilk veri: 1 gösterim, 0 tıklama; sitemap 20 URL, 0 dizinde). Site değişikliği yok.
 - 2026-11-17: Teknik denetim. Düzeltme: 360-390 px ekranda üst menü (3 bağlantı) taşıyor, tüm sayfalarda yatay kaydırma/uzaklaştırma yapıyordu → dar ekranda menü ikinci satıra iniyor. Sitemap lastmod artık derleme günü değil, site kaynağının son değiştiği gün (iş akışında fetch-depth: 0). measure.py mobil taşmayı da yakalıyor.
+- 2026-11-18: Günlük rapor (Search Console: 17 Kasım 1 gösterim, ilk gerçek sorgu "eyp to word", sıra 10). EYP araç sayfası SSS'sine "EYP dosyası Word'e çevrilir mi?" eklendi; tabloya 'eyp word'e çevirme' niyeti işlendi.

@@ -230,6 +230,7 @@ TOOLS += [
        faq=[("EYP dosyası nedir?", "EYP, kamu kurumlarının resmî yazıyı, eklerini, üst verisini ve imza bilgisini tek dosyada topladığı e-Yazışma Paketidir. Ayrıntılar EYP dosyası nedir rehberimizde."),
             ("EYP dosyası nasıl açılır?", "Dosyayı bu sayfaya bırakın. Üst yazı ve ekler ayrı dosyalar olarak listelenir, istediğinizi indirebilirsiniz."),
             ("EYP dosyası telefonda açılır mı?", "Evet. Bu sayfayı telefonun tarayıcısında açın ve dosyayı Dosyalar uygulamasından seçin. Çıkan PDF'leri telefonun PDF görüntüleyicisinde okuyabilirsiniz."),
+            ("EYP dosyası Word'e çevrilir mi?", "Doğrudan değil. Paketi açınca üst yazı ve ekler kendi biçimleriyle çıkar. Ek .udf ise UDF'den Word'e çevirme aracıyla Word'e çevirebilirsiniz; PDF'ten Word'e çeviri bu sitede yok."),
             ("Şifreli EYP açılır mı?", "Hayır. Şifreli paketler yalnızca alıcı kurumun şifre çözme anahtarıyla açılabilir."),
             ("İmzanın geçerliliği kontrol ediliyor mu?", "Hayır. Bu araç paketin içeriğini açar. İmza geçerliliği için e-İmzager gibi bir imza programı kullanın.")]),
   dict(id="efatura-excel", slug="e-fatura-xml-excel-aktarma", tag="Muhasebe", card="e-Fatura → Excel", fmt=(".xml", ".xlsx"), libs=["jszip"],
