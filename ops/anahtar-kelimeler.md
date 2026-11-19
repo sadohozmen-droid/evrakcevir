@@ -23,6 +23,7 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | eyp word'e çevirme, eyp to word | /eyp-dosyasi-acma/ (SSS) | yayında |
 | eyp dosyası nedir, kep ile gelen dosya açılmıyor | /rehber/eyp-dosyasi-nedir/ | yayında |
 | .imz dosyası nedir, e-imzalı belge nasıl açılır | /rehber/imz-dosyasi-nedir/ | yayında |
+| imz to pdf, imz pdf'e çevirme | /imz-dosyasi-acma/ (SSS) | yayında |
 | e-fatura xml dosyası nasıl açılır | rehber | planlı |
 | e-arşiv fatura pdf indirme | rehber | planlı |
 | uyap'a dilekçe nasıl gönderilir (genel) | rehber | planlı |
