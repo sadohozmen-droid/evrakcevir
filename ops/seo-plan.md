@@ -16,3 +16,11 @@ Hedef: organik trafiği artırmak. Ölçüt: Google Search Console tıklama, gö
 - En iyi performans gösteren rehberleri güncelle ve derinleştir.
 - Bağlantı kazanımı fikirleri (forum, sözlük, meslek grupları) raporda öneri olarak sunulur; hesap açma ya da paylaşım sahibinin onayı olmadan yapılmaz.
 - 3. ayın sonunda trafik raporu ve gelir modeli önerisi.
+
+## Araç fikirleri
+Rakip analizinden (21 Kasım 2026, `raporlar/rakip-2026-11-21.md`). Geliştirme kararı sahibinde.
+1. **"Hangi dosyalar açılır / açılmaz" bölümü** (araç değil, tüm araç sayfalarına küçük ek): mukellefportal.com bunu açıkça listeliyor; beklentiyi yönetir, "neden açılmadı" sorgularını karşılar.
+2. **UDF karşılaştırma** (iki UDF sürümü arasındaki metin farkını gösterme): imer.av.tr'de var. Avukatların taslak/son hâl kontrolü için; mevcut UDF okuyucu kodu üzerine kurulabilir.
+3. **Kişisel veri karartma (PDF/UDF'de T.C. kimlik no, telefon vb.)**: imer.av.tr'de "kişisel veri maskeleme" aracı var. Tarayıcıda çalışan, dosya yüklemeyen yaklaşımımızla doğal uyum; mahkemeye/kuruma belge sunanlar için.
+4. **e-SMM / e-Müstahsil XML desteği**: mukellefportal e-SMM'yi ayrı sayfayla hedefliyor. Önce mevcut e-Fatura aracının bu XML'leri doğru gösterip göstermediği test edilmeli; gösteriyorsa ayrı niyet sayfası yeter.
+5. **Tarayıcıda UDF düzenleyici** (aç, metni değiştir, UDF olarak kaydet): imer.av.tr ve udf.net.tr'de var. Word→UDF zinciri zaten var; daha büyük iş, en sona.

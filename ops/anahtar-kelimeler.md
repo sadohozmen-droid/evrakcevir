@@ -30,3 +30,8 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | pdf'i e-devlet / başvuru için küçültme | rehber | planlı |
 | kimlik fotokopisi nasıl çekilir / yazdırılır | rehber | planlı |
 | udf dosyası telefonda açma (android, iphone) | rehber | planlı |
+| e-smm xml açma, serbest meslek makbuzu xml pdf | rehber (önce araç testi) | planlı |
+| toplu e-fatura xml pdf, e-arşiv zip pdf'e çevirme | rehber | planlı |
+| p7s dosyası nasıl açılır | rehber | planlı |
+| uyap doküman editörü nedir, nasıl kurulur | rehber | planlı |
+| şikâyet dilekçesi örneği | dilekçe sayfası | planlı |
