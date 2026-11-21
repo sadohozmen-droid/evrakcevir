@@ -11,3 +11,4 @@
 - 2026-11-19: Günlük rapor (Search Console 18 Kasım: 7 gösterim, 0 tıklama; ilk sorgular "imz to pdf" ve "imz dosyası açma"). İMZ araç sayfası SSS'sine "İMZ dosyası PDF'e nasıl çevrilir?" eklendi; tabloya 'imz to pdf' niyeti işlendi.
 - 2026-11-20: Günlük rapor (Search Console 19 Kasım: 5 gösterim, 0 tıklama, sıra 29; yeni sorgu 'eyp dosyası nasıl açılır' sıra 55). Site değişikliği yok.
 - 2026-11-20: Yeni rehber: e-Fatura XML dosyası nasıl açılır (/rehber/e-fatura-xml-dosyasi-nasil-acilir/; UBL-TR, gömülü XSLT ve 'XML esas alınır' bilgisi GİB e-Fatura Entegrasyon Kılavuzu'ndan). İyileştirme: e-Fatura XML → PDF araç sayfası SSS'sine 'neden kod görünüyor' ve 'PDF XML'in yerine geçer mi' eklendi, ilk SSS rehbere yönlendiriyor.
+- 2026-11-21: Günlük rapor (Search Console 20 Kasım: ilk tıklama, 15 gösterim, sıra 9,6; /imz-dosyasi-acma/ 7 günde 17 gösterim, 1 tıklama). Site değişikliği yok.
