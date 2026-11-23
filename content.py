@@ -102,8 +102,8 @@ TOOL_TEXT = {
    gets=["Hedef boyutun altında bir PDF", "İnilemezse en küçük sonuç ve ne yapılabileceğine dair öneri"],
    faq_override={}),
  "sayfa": dict(
-   title="PDF Sayfa Silme ve Ayırma – Boş Sayfaları Atın",
-   desc="PDF'ten sayfa silin, istediğiniz sayfaları ayrı PDF olarak alın ya da belgeyi aralıklara bölün. Kalite kaybı olmaz. Ücretsiz, dosyanız bilgisayarınızdan çıkmaz.",
+   title="PDF Sayfa Silme ve Ayırma – Ücretsiz, Programsız",
+   desc="PDF'ten sayfa silme: boş ya da gereksiz sayfaları tek seferde atın, istediğiniz sayfaları ayrı PDF yapın. Kalite düşmez, telefonda çalışır, dosya yüklenmez.",
    who="Taranmış belgelerdeki boş sayfaları atmak ya da uzun bir belgeyi bölmek isteyenler.",
    how="Sayfa numaralarını 2, 5-7 ya da 10- biçiminde yazarsınız. Seçilen sayfalar olduğu gibi kopyalanır; metin ve görüntü kalitesi değişmez.",
    gets=["Düzenlenmiş tek bir PDF ya da her aralık için ayrı PDF"],

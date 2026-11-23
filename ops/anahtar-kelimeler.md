@@ -16,7 +16,7 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | kimlik ön arka tek sayfa | /kimlik-on-arka-tek-sayfa/ | yayında |
 | pdf birleştirme, e-devlet belgeleri birleştirme | /pdf-birlestirme/ | yayında |
 | pdf küçültme, pdf 2 mb altına düşürme | /pdf-kucultme/ | yayında |
-| pdf sayfa silme, pdf sayfa ayırma | /pdf-sayfa-ayirma/ | yayında |
+| pdf sayfa silme, pdf'den sayfa silme, pdf sayfa ayırma | /pdf-sayfa-ayirma/ | yayında |
 | dilekçe nasıl yazılır, dilekçe örneği | /dilekce-yazma/ | yayında |
 | istifa dilekçesi örneği | /istifa-dilekcesi/ | yayında |
 | bilgi edinme dilekçesi | /bilgi-edinme-dilekcesi/ | yayında |
@@ -32,6 +32,6 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | udf dosyası telefonda açma (android, iphone) | rehber | planlı |
 | e-smm xml açma, serbest meslek makbuzu xml pdf | rehber (önce araç testi) | planlı |
 | toplu e-fatura xml pdf, e-arşiv zip pdf'e çevirme | rehber | planlı |
-| p7s dosyası nasıl açılır | rehber | planlı |
+| p7s dosyası nasıl açılır, smime.p7s nedir, p7m açma | /rehber/p7s-dosyasi-nasil-acilir/ | yayında |
 | uyap doküman editörü nedir, nasıl kurulur | rehber | planlı |
 | şikâyet dilekçesi örneği | dilekçe sayfası | planlı |
