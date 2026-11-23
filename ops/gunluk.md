@@ -14,3 +14,4 @@
 - 2026-11-21: Günlük rapor (Search Console 20 Kasım: ilk tıklama, 15 gösterim, sıra 9,6; /imz-dosyasi-acma/ 7 günde 17 gösterim, 1 tıklama). Site değişikliği yok.
 - 2026-11-21: Haftalık rakip analizi (ops/raporlar/rakip-2026-11-21.md). Tabloya 5 planlı niyet, seo-plan.md'ye 'Araç fikirleri' eklendi. Site değişikliği yok.
 - 2026-11-22: Günlük rapor (Search Console 21 Kasım: 1 tıklama, 13 gösterim, sıra 30,2; 'pdf udf ye çevirme' sorguları /word-udf-cevirme/'ye düşüyor, /pdf-udf-cevirme/ gösterimsiz). Site değişikliği yok.
+- 2026-11-23: Günlük rapor + haftalık özet (16-22 Kasım: 2 tıklama, 51 gösterim). /pdf-udf-cevirme/ SSS'sine 'PDF'yi UDF'ye nasıl dönüştürürüm?', /word-udf-cevirme/ SSS'sine 'Elimde yalnızca PDF var' sorusu eklendi (PDF→UDF niyetini doğru sayfaya yönlendirmek için).
