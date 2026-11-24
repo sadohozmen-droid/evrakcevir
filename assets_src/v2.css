@@ -118,4 +118,8 @@ a.btn{text-decoration:none}
   header.top .wrap{flex-wrap:wrap;column-gap:8px;row-gap:0;padding-bottom:4px}
   .topnav{width:100%;margin-left:-8px}
   .topnav a{padding:0 8px;font-size:14.5px}
+  /* Rehber tabloları (3 sütun + kod) 360 px'te taşıyordu: hücreler sarar, gerekirse tablo kendi içinde kayar */
+  .guide table{font-size:14px;display:block;overflow-x:auto}
+  .guide th,.guide td{padding:6px 7px}
+  .guide td code{overflow-wrap:anywhere}
 }

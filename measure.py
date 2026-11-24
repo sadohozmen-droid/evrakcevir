@@ -4,6 +4,9 @@ NM="node_modules/"
 MAP={"pdf-lib.min.js":NM+"pdf-lib/dist/pdf-lib.min.js","fontkit.umd.min.js":NM+"@pdf-lib/fontkit/dist/fontkit.umd.min.js","jszip.min.js":NM+"jszip/dist/jszip.min.js","pdf.min.js":NM+"pdfjs-dist/build/pdf.min.js","pdf.worker.min.js":NM+"pdfjs-dist/build/pdf.worker.min.js","html2canvas.min.js":NM+"html2canvas/dist/html2canvas.min.js"}
 ROOT=sys.argv[1] if len(sys.argv)>1 else "site"; TAG=sys.argv[2] if len(sys.argv)>2 else "before"
 PAGES=sys.argv[3].split(",") if len(sys.argv)>3 else ["/","/udf-pdf-cevirme/","/dilekce-yazma/","/e-fatura-xml-excel-aktarma/"]
+# Rehberlerdeki tablolar da taşabiliyor (24 Kasım): varsayılan listeye tüm rehberler eklenir
+if len(sys.argv)<=3 and os.path.isdir(os.path.join(ROOT,"rehber")):
+    PAGES+=sorted("/rehber/%s/"%d for d in os.listdir(os.path.join(ROOT,"rehber")) if os.path.isfile(os.path.join(ROOT,"rehber",d,"index.html")))
 os.makedirs("shots",exist_ok=True)
 srv=subprocess.Popen(["python3","-m","http.server","8766","-d",ROOT],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL); time.sleep(1)
 BASE="http://localhost:8766"
