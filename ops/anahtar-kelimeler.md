@@ -33,5 +33,5 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | e-smm xml açma, serbest meslek makbuzu xml pdf | rehber (önce araç testi) | planlı |
 | toplu e-fatura xml pdf, e-arşiv zip pdf'e çevirme | rehber | planlı |
 | p7s dosyası nasıl açılır, smime.p7s nedir, p7m açma | /rehber/p7s-dosyasi-nasil-acilir/ | yayında |
-| uyap doküman editörü nedir, nasıl kurulur | rehber | planlı |
+| uyap doküman editörü nedir, nasıl kurulur, javaw hatası | /rehber/uyap-dokuman-editoru-nedir/ | yayında |
 | şikâyet dilekçesi örneği | dilekçe sayfası | planlı |

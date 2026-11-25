@@ -88,8 +88,8 @@ TOOL_TEXT = {
    gets=["Yazdırılmaya hazır, tek sayfalık PDF"],
    faq_override={}),
  "birlestir": dict(
-   title="PDF Birleştirme – e-Devlet Belgelerini Tek PDF Yapın",
-   desc="e-Devlet belgelerini, PDF dosyalarını ve JPG fotoğrafları istediğiniz sırada tek PDF'te birleştirin. Barkod ve karekod korunur. Ücretsiz, dosya yüklenmez.",
+   title="PDF Birleştirme Ücretsiz – e-Devlet Belgeleri ve JPG Tek PDF",
+   desc="PDF ve JPG dosyalarını ekleyin, sırasını ayarlayın, tek PDF'te birleştirin. e-Devlet barkodu bozulmaz, telefonda çalışır. Ücretsiz, üyeliksiz, yükleme yok.",
    who="Burs, iş, vize ya da ihale başvurusu için belgeleri tek dosyada toplaması gerekenler.",
    how="PDF sayfaları olduğu gibi kopyalanır, böylece e-Devlet barkodu ve karekodu bozulmaz. Fotoğraflar A4 sayfaya kenar boşluğuyla ortalanır; yatay fotoğraflar yatay sayfaya yerleşir.",
    gets=["Seçtiğiniz sırada tek bir PDF dosyası", "Eklenemeyen dosya varsa adıyla birlikte uyarı"],
