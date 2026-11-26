@@ -245,6 +245,7 @@ TOOLS += [
               ".eyp dosyası, üst yazıyı, ekleri, belgeye ait üst verileri ve elektronik imzayı tek pakette toplar. Bu araç paketi açar, üst yazıyı ve ekleri ayırır. Paket içinde e-imzalı (.imz) bir ek varsa İMZ açma aracıyla onu da açabilirsiniz."],
        faq=[("EYP dosyası nedir?", "EYP, kamu kurumlarının resmî yazıyı, eklerini, üst verisini ve imza bilgisini tek dosyada topladığı e-Yazışma Paketidir. Ayrıntılar EYP dosyası nedir rehberimizde."),
             ("EYP dosyası nasıl açılır?", "Dosyayı bu sayfaya bırakın. Üst yazı ve ekler ayrı dosyalar olarak listelenir, istediğinizi indirebilirsiniz."),
+            ("EYP dosyası açma programı gerekir mi?", "Bu sayfa için gerekmez. Araç tarayıcıda çalışır; bilgisayara program kurmadan, üyelik olmadan paketi açar. Dosya sunucuya gönderilmez."),
             ("EYP dosyası telefonda açılır mı?", "Evet. Bu sayfayı telefonun tarayıcısında açın ve dosyayı Dosyalar uygulamasından seçin. Çıkan PDF'leri telefonun PDF görüntüleyicisinde okuyabilirsiniz."),
             ("EYP dosyası Word'e çevrilir mi?", "Doğrudan değil. Paketi açınca üst yazı ve ekler kendi biçimleriyle çıkar. Ek .udf ise UDF'den Word'e çevirme aracıyla Word'e çevirebilirsiniz; PDF'ten Word'e çeviri bu sitede yok."),
             ("Şifreli EYP açılır mı?", "Hayır. Şifreli paketler yalnızca alıcı kurumun şifre çözme anahtarıyla açılabilir."),
