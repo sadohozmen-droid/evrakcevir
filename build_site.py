@@ -243,7 +243,7 @@ TOOLS += [
               "Üst yazıyı ve ekleri tek tek ya da hepsini ZIP olarak indirin."],
        about=["Kamu kurumları resmî yazışmalarını e-Yazışma Teknik Rehberi'ne uygun e-Yazışma Paketi (.eyp) olarak gönderir. KEP (Kayıtlı Elektronik Posta) ile şirketlere ve vatandaşlara gelen resmî yazılar da çoğunlukla bu biçimdedir.",
               ".eyp dosyası, üst yazıyı, ekleri, belgeye ait üst verileri ve elektronik imzayı tek pakette toplar. Bu araç paketi açar, üst yazıyı ve ekleri ayırır. Paket içinde e-imzalı (.imz) bir ek varsa İMZ açma aracıyla onu da açabilirsiniz."],
-       faq=[("EYP dosyası nedir?", "EYP, kamu kurumlarının resmî yazıyı, eklerini, üst verisini ve imza bilgisini tek dosyada topladığı e-Yazışma Paketidir. Ayrıntılar EYP dosyası nedir rehberimizde."),
+       faq=[("EYP dosyası nedir?", "EYP, kamu kurumlarının resmî yazıyı, eklerini, üst verisini ve imza bilgisini tek dosyada topladığı e-Yazışma Paketidir. Ayrıntılar [EYP dosyası nedir rehberimizde](/rehber/eyp-dosyasi-nedir/)."),
             ("EYP dosyası nasıl açılır?", "Dosyayı bu sayfaya bırakın. Üst yazı ve ekler ayrı dosyalar olarak listelenir, istediğinizi indirebilirsiniz."),
             ("EYP dosyası açma programı gerekir mi?", "Bu sayfa için gerekmez. Araç tarayıcıda çalışır; bilgisayara program kurmadan, üyelik olmadan paketi açar. Dosya sunucuya gönderilmez."),
             ("EYP dosyası telefonda açılır mı?", "Evet. Bu sayfayı telefonun tarayıcısında açın ve dosyayı Dosyalar uygulamasından seçin. Çıkan PDF'leri telefonun PDF görüntüleyicisinde okuyabilirsiniz."),
@@ -349,7 +349,10 @@ FAVICON = "data:image/svg+xml," + "%3Csvg xmlns='http://www.w3.org/2000/svg' vie
 LOGO = '<span class="mark" aria-hidden="true"><svg width="16" height="18" viewBox="0 0 16 18" fill="none"><path d="M2 1h8l4 4v12H2z" fill="#fff"/><path d="M10 1v4h4" fill="none" stroke="#c8102e" stroke-width="1.4"/><path d="M4.5 9h7M4.5 12h7M4.5 15h4" stroke="#c8102e" stroke-width="1.4"/></svg></span>'
 
 def ld(obj): return f'<script type="application/ld+json">{json.dumps(obj, ensure_ascii=False)}</script>'
-def faq_ld(faq): return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}
+MD_LINK = re.compile(r"\[([^\]]+)\]\((/[^)\s]*)\)")
+def plain(s): return MD_LINK.sub(r"\1", s)
+def linked(s): return MD_LINK.sub(lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', e(s))
+def faq_ld(faq): return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": plain(a)}} for q, a in faq]}
 
 def head(title, desc, path, jsonld, body_attrs="", current=""):
     url = SITE + path
@@ -450,7 +453,7 @@ for t in TOOLS:
     ]
     steps = "".join(f"<li><span>{e(s)}</span></li>" for s in t["steps"])
     gets = "".join(f"<li>{e(g)}</li>" for g in t.get("gets", []))
-    faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in t["faq"])
+    faq = "".join(f"<details><summary>{e(q)}</summary><p>{linked(a)}</p></details>" for q, a in t["faq"])
     same = [o for o in TOOLS if o["id"] != t["id"] and GROUP_OF.get(o["id"]) == GROUP_OF.get(t["id"])]
     others = (same + [o for o in TOOLS if o["id"] != t["id"] and o not in same])[:4]
     target = "#dl-makam" if t["id"] in ("dilekce", "istifa", "bilgi") else f"#f-{t['id']}" if t["id"] != "kimlik" else "#f-on"
