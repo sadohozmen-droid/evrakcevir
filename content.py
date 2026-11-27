@@ -5,7 +5,7 @@ who: kimin için · how: nasıl çalışır · gets: elinize geçenler · faq_ov
 TOOL_TEXT = {
  "udf-pdf": dict(
    title="UDF PDF Çevirme – UYAP UDF Dosyasını PDF'e Dönüştürün",
-   desc="UYAP'tan inen UDF dosyasını Doküman Editörü kurmadan PDF'e çevirin. Hizalama, tablolar ve görseller korunur. Ücretsiz, dosyanız bilgisayarınızdan çıkmaz.",
+   desc="UYAP'tan inen UDF dosyasını Doküman Editörü kurmadan PDF'e çevirin. Hizalama, tablolar ve görseller korunur. Ücretsiz, telefonda da çalışır, dosya yüklenmez.",
    who="UYAP'tan karar, tebligat ya da dilekçe indiren vatandaşlar, avukatlar, şirketlerin hukuk ve insan kaynakları birimleri.",
    how="Araç UDF paketinin içindeki metni ve biçim bilgisini (paragraf hizası, girinti, yazı tipi boyutu, kalın ve italik yazı, tablolar, gömülü görseller) okur ve aynı düzende bir PDF sayfası dizer. İşlem tarayıcınızda yapılır, dosya internete gönderilmez.",
    gets=["Her bilgisayarda, telefonda ve tablette açılan bir PDF", "Birden fazla dosya seçtiyseniz hepsini tek ZIP'te indirme seçeneği"],

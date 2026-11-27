@@ -112,7 +112,7 @@ TOOLS = [
        faq=[("UDF dosyası nasıl açılır?", "UDF dosyaları normalde UYAP Doküman Editörü ile açılır. Editörü kurmak istemiyorsanız dosyayı bu sayfada PDF'e çevirip herhangi bir PDF okuyucuyla açabilirsiniz."),
             ("Dosyam bir sunucuya yükleniyor mu?", "Hayır. Dönüşüm tamamen tarayıcınızda yapılır, dosya internete gönderilmez. Bu yüzden gizli dava evrakı için de güvenle kullanabilirsiniz."),
             ("Çıktı aslıyla birebir aynı mı?", "Metin, paragraf hizası, yazı boyutu, kalın ve italik yazı, tablolar ve gömülü görseller aktarılır. Üst bilgi, alt bilgi ve elektronik imza bilgisi PDF'e eklenmez. Resmî işlemlerde belgenin UYAP'taki aslı geçerlidir."),
-            ("Telefonda çalışır mı?", "Evet. Android ve iPhone tarayıcılarında da çalışır. Dosyayı Dosyalar uygulamasından seçmeniz yeterlidir."),
+            ("Telefonda çalışır mı?", "Evet. Android'de Chrome, iPhone'da Safari ile çalışır; uygulama kurmanız gerekmez. Dosyayı İndirilenler ya da Dosyalar uygulamasından seçin, oluşan PDF'i telefonun PDF görüntüleyicisinde açın. WhatsApp'tan gelen dosyalar için adımlar [UDF dosyası telefonda nasıl açılır rehberimizde](/rehber/udf-dosyasi-telefonda-acma/)."),
             ("Ücretli mi, üyelik gerekiyor mu?", "Hayır. Araç ücretsizdir ve üyelik istemez.")]),
   dict(id="udf-word", slug="udf-word-cevirme", tag="UYAP", card="UDF → Word", fmt=(".udf", ".docx"),
        libs=["jszip"],

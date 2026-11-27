@@ -29,7 +29,7 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | uyap'a dilekçe nasıl gönderilir (genel) | rehber | planlı |
 | pdf'i e-devlet / başvuru için küçültme | rehber | planlı |
 | kimlik fotokopisi nasıl çekilir / yazdırılır | rehber | planlı |
-| udf dosyası telefonda açma (android, iphone) | rehber | planlı |
+| udf dosyası telefonda açma (android, iphone) | /rehber/udf-dosyasi-telefonda-acma/ | yayında |
 | e-smm xml açma, serbest meslek makbuzu xml pdf | rehber (önce araç testi) | planlı |
 | toplu e-fatura xml pdf, e-arşiv zip pdf'e çevirme | rehber | planlı |
 | p7s dosyası nasıl açılır, smime.p7s nedir, p7m açma | /rehber/p7s-dosyasi-nasil-acilir/ | yayında |

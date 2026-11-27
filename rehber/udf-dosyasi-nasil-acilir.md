@@ -3,6 +3,7 @@ title: UDF Dosyası Nasıl Açılır? Programsız 3 Yol (Telefon Dahil)
 h1: UDF dosyası nasıl açılır?
 description: UYAP'tan inen UDF dosyasını UYAP Doküman Editörü ile, programsız PDF'e çevirerek ya da Word'e aktararak açmanın yolları. Telefonda açma ve sık hatalar.
 date: 2026-11-16
+updated: 2026-11-27
 tools: udf-pdf, udf-word, word-udf
 ---
 UDF dosyasını açmanın en hızlı yolu, dosyayı tarayıcıda PDF'e çevirmektir. Bilgisayarınıza program kurmanız gerekmez, telefonda da çalışır. Aşağıda üç yolu da anlatıyoruz.
@@ -29,7 +30,7 @@ UDF dosyalarını oluşturan ve açan resmî program UYAP Doküman Editörü'dü
 
 ## Telefonda UDF dosyası nasıl açılır?
 
-Telefonda UDF açan uygulama aramanıza gerek yok. Tarayıcıda [UDF → PDF aracını](/udf-pdf-cevirme/) açın, dosyayı "Dosyalar" uygulamasından seçin, oluşan PDF'i telefonunuzun PDF görüntüleyicisinde açın.
+Telefonda UDF açan uygulama aramanıza gerek yok. Tarayıcıda [UDF → PDF aracını](/udf-pdf-cevirme/) açın, dosyayı "Dosyalar" uygulamasından seçin, oluşan PDF'i telefonunuzun PDF görüntüleyicisinde açın. Android ve iPhone için ayrıntılı adımlar ve sık sorunlar [UDF dosyası telefonda nasıl açılır](/rehber/udf-dosyasi-telefonda-acma/) rehberinde.
 
 ## Word'de yazdığım dilekçeyi UDF yapabilir miyim?
 

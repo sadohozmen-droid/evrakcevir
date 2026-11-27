@@ -9,6 +9,16 @@ function b64ToBytes(b64) { const s = atob(b64.replace(/\s+/g, "")); const u = ne
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("on"), 5000); }
 function setStatus(id, msg, kind) { const el = $("#s-" + id); if (!el) return; el.textContent = msg || ""; el.dataset.kind = kind || ""; }
 function setProgress(id, frac) { const b = $("#p-" + id); if (!b) return; if (frac == null) { b.classList.remove("on"); return; } b.classList.add("on"); b.firstElementChild.style.width = Math.round(frac * 100) + "%"; }
+/* iOS (iPhone/iPad) dosya seçicisi accept içindeki .udf/.eyp/.imz gibi uzantıları tanımıyor ve bu dosyaları soluk (seçilemez) gösteriyor.
+   iOS'ta bu tür girişlerden accept kaldırılır; uygun olmayan dosyayı zaten fileList/okType ayıklıyor. */
+(function iosAcceptFix() {
+  try {
+    const ios = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    if (!ios) return;
+    for (const i of document.querySelectorAll('input[type="file"][accept]'))
+      if (/\.(udf|eyp|imz|p7s|p7m)\b/i.test(i.getAttribute("accept"))) i.removeAttribute("accept");
+  } catch (e) {}
+})();
 const stripCtl = s => s.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F￾￿]/g, "");
 
 /* ---- indirme: Claude önizlemesinde downloads yeteneği, kendi sitenizde normal indirme ---- */
