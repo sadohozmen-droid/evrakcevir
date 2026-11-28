@@ -181,6 +181,7 @@ TOOLS = [
        about=["İş başvurusu, banka, okul ya da resmî kurumlar çoğu zaman kimlik fotokopisinin ön ve arka yüzünü tek sayfada ister. Bu araç iki fotoğrafı A4 sayfaya alt alta yerleştirir. \"Gerçek boyut\" seçeneğinde kart, yazdırıldığında kimlik kartının kendi ölçüsü olan 85,6 × 54 mm çıkar.",
               "Yeni çipli T.C. kimlik kartı, sürücü belgesi, öğrenci kartı ve banka kartı aynı ölçüdedir, hepsi için kullanılabilir."],
        faq=[("Kimliğin ön ve arka yüzü tek sayfaya nasıl yapılır?", "İki yüzün fotoğrafını çekin, ön ve arka kutularına ekleyin, \"PDF oluştur\"a basın. İki yüz tek A4 sayfada alt alta çıkar; yazdırırken ölçeği %100 seçin."),
+            ("Kimlik fotoğrafını PDF'e nasıl çeviririm?", "Ön ve arka yüzün fotoğrafını ekleyip \"PDF oluştur\"a basın; iki yüz tek sayfalık bir PDF olarak iner. Bu PDF'i e-posta ile gönderebilir ya da başvuru sitelerine yükleyebilirsiniz. Birden fazla belgeyi tek dosyada toplamak için [PDF birleştirme](/pdf-birlestirme/) aracını kullanabilirsiniz."),
             ("Telefondan yapabilir miyim?", "Evet. Sayfa telefon tarayıcısında da çalışır; fotoğrafları doğrudan kameradan ya da galeriden seçebilirsiniz."),
             ("Kimlik fotoğrafım internete yükleniyor mu?", "Hayır. Fotoğraflar yalnızca tarayıcınızda işlenir, hiçbir sunucuya gönderilmez."),
             ("Yazdırınca neden küçük ya da büyük çıkıyor?", "Yazdırma ekranında \"Sayfaya sığdır\" seçiliyse ölçü değişir. Ölçeği \"%100\" ya da \"Gerçek boyut\" seçin."),
