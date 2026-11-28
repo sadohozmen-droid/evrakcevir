@@ -24,3 +24,8 @@ Rakip analizinden (21 Kasım 2026, `raporlar/rakip-2026-11-21.md`). Geliştirme 
 3. **Kişisel veri karartma (PDF/UDF'de T.C. kimlik no, telefon vb.)**: imer.av.tr'de "kişisel veri maskeleme" aracı var. Tarayıcıda çalışan, dosya yüklemeyen yaklaşımımızla doğal uyum; mahkemeye/kuruma belge sunanlar için.
 4. **e-SMM / e-Müstahsil XML desteği**: mukellefportal e-SMM'yi ayrı sayfayla hedefliyor. Önce mevcut e-Fatura aracının bu XML'leri doğru gösterip göstermediği test edilmeli; gösteriyorsa ayrı niyet sayfası yeter.
 5. **Tarayıcıda UDF düzenleyici** (aç, metni değiştir, UDF olarak kaydet): imer.av.tr ve udf.net.tr'de var. Word→UDF zinciri zaten var; daha büyük iş, en sona.
+
+### 28 Kasım 2026 eklemeleri (`raporlar/rakip-2026-11-28.md`)
+6. **UDF birleştirme** (birden çok UDF'yi tek UDF ya da tek PDF yapma): imer.av.tr hub'ında "Yeni" etiketiyle eklenmiş. Mevcut UDF okuyucu + PDF birleştirme kodu üzerine kurulabilir; dava dosyası evraklarını tek belgede toplamak isteyenler için.
+7. **Resim (JPG/PNG) → UDF**: imer.av.tr'de yeni. Fotoğrafı çekilmiş belgeyi UYAP'a uygun biçime sokma ihtiyacı; Word→UDF zincirindeki UDF yazıcı kullanılabilir. OCR vaadi olmadan, yalnız görsel gömme.
+8. **TIF/TIFF → PDF**: imer.av.tr UDF kümesinde listeliyor. Tarayıcı çıktıları ve bazı kurum belgeleri TIFF olabiliyor; tarayıcıda çalışan basit bir çevirici, PDF birleştirme aracına da girdi olur. Talep hacmi henüz ölçülmedi; önce Search Console'da "tif" sorgusu görülürse.

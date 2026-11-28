@@ -35,3 +35,7 @@ Her arama niyetine tek sayfa. Durum: `yayında` / `planlı`.
 | p7s dosyası nasıl açılır, smime.p7s nedir, p7m açma | /rehber/p7s-dosyasi-nasil-acilir/ | yayında |
 | uyap doküman editörü nedir, nasıl kurulur, javaw hatası | /rehber/uyap-dokuman-editoru-nedir/ | yayında |
 | şikâyet dilekçesi örneği | dilekçe sayfası | planlı |
+| eyp pdf'e çevirme, eyp to pdf | /eyp-dosyasi-acma/ (SSS) | yayında |
+| udf dosyası açılmıyor, udf .zip olarak iniyor (indirme/uzantı sorunları) | rehber (önce /rehber/uyap-dokuman-editoru-nedir/ ile çakışma kontrolü) | planlı |
+| eyp imzası nasıl doğrulanır, eyp imza geçerli mi | rehber (araç doğrulamaz; İmzager yolu anlatılır) | planlı |
+| e-arşiv fatura görüntüleme programı | /rehber/e-fatura-xml-dosyasi-nasil-acilir/ (SSS) | planlı |

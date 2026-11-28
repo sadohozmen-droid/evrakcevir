@@ -249,6 +249,7 @@ TOOLS += [
             ("EYP dosyası açma programı gerekir mi?", "Bu sayfa için gerekmez. Araç tarayıcıda çalışır; bilgisayara program kurmadan, üyelik olmadan paketi açar. Dosya sunucuya gönderilmez."),
             ("EYP dosyası telefonda açılır mı?", "Evet. Bu sayfayı telefonun tarayıcısında açın ve dosyayı Dosyalar uygulamasından seçin. Çıkan PDF'leri telefonun PDF görüntüleyicisinde okuyabilirsiniz."),
             ("EYP dosyası Word'e çevrilir mi?", "Doğrudan değil. Paketi açınca üst yazı ve ekler kendi biçimleriyle çıkar. Ek .udf ise UDF'den Word'e çevirme aracıyla Word'e çevirebilirsiniz; PDF'ten Word'e çeviri bu sitede yok."),
+            ("EYP dosyası PDF'e nasıl çevrilir?", "Paketi bu sayfada açın; üst yazı ve ekler kendi biçimleriyle çıkar. PDF olanları ayrıca çevirmeniz gerekmez. .udf ekleri [UDF → PDF aracıyla](/udf-pdf-cevirme/), .imz ekleri [İMZ açma aracıyla](/imz-dosyasi-acma/) PDF'e dönüştürülür. Hepsini tek dosya yapmak için [PDF birleştirme](/pdf-birlestirme/) aracını kullanın."),
             ("Şifreli EYP açılır mı?", "Hayır. Şifreli paketler yalnızca alıcı kurumun şifre çözme anahtarıyla açılabilir."),
             ("İmzanın geçerliliği kontrol ediliyor mu?", "Hayır. Bu araç paketin içeriğini açar. İmza geçerliliği için İmzager gibi bir e-imza programı kullanın.")]),
   dict(id="efatura-excel", slug="e-fatura-xml-excel-aktarma", tag="Muhasebe", card="e-Fatura → Excel", fmt=(".xml", ".xlsx"), libs=["jszip"],
